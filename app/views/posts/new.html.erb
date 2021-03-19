@@ -1,15 +1,4 @@
-<% if @post.errors.any? %>
-  <div id="error_explanation">
-    <div class="alert alert-danger w-50">
-      The form contains <%= pluralize(@post.errors.count, "error") %>
-    </div>
-    <ul>
-      <% @post.errors.full_messages.each do |error| %>
-        <li> <%= error %> </li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+
 
 <div class="panel panel-default">
   <div class="panel-heading"><h2>New post</h2></div>
@@ -17,7 +6,8 @@
 
 
 
-    <%= form_with url: "/posts/new", method: :get do |f| %>
+    <%= form_with model: @post do |f| %>
+      <%= render "posts/errors" %>
 
       <div class="form-group">
         <%= f.label :title %><br />
@@ -26,14 +16,20 @@
 
       <div class="form-group">
         <%= f.label :body %><br />
-        <%= f.text_field :body, class:"form-control" %>
+        <%= f.text_area :body, class:"form-control" %>
       </div>
 
 
       <div class="actions">
-        <%= f.submit "Publish post", class: "btn btn-primary" %>
+        <%= f.submit "Publish Post", class: "btn btn-primary" %>
       </div>
     <% end %>
+
+
+
+
+
+
   </div>
   <div class="panel-footer"><%= link_to 'All Posts', posts_index_path  %></div>
 </div>
