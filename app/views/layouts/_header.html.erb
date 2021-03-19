@@ -12,8 +12,8 @@
           </button>
         </div>
         <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <li><%= link_to "Home", '#' %></li>
-          <li><%= link_to "Feed", root_path %></li>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Feed", posts_index_path %></li>
           <% if member_signed_in? %>
             <li><%= link_to "Add Post", new_post_path %> </li>
             <li class="dropdown">

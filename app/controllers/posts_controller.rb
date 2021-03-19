@@ -6,6 +6,9 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def show
+  end
+
   def create
     @post = Post.new(post_params)
 
