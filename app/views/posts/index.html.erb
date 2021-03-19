@@ -12,7 +12,7 @@
             <%= post.body %>
             <% if member_signed_in? %>
               <p>
-                <%= current_member.name %> &nbsp;&bull; <%= Time.now %>
+                <%= current_member.name %> &nbsp;&bull; <%= post.created_at %>
               </p>
             <% end %>
           </div>
