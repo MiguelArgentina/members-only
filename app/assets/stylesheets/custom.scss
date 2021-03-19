@@ -61,6 +61,7 @@ p {
 
 #error_explanation {
   color: red;
+
   ul {
     color: red;
     margin-bottom: 30px;
@@ -69,6 +70,7 @@ p {
 
 .field_with_errors {
   @extend .has-error;
+
   .form_control {
     color: $state-danger-text;
   }
@@ -79,6 +81,13 @@ p {
 
 .clubhouse {
   padding-top: 30px;
+}
+
+.author {
+  p {
+    font-size: 1em;
+    color: $gray-light;
+  }
 }
 
 .panel-footer {

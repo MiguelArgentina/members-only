@@ -1,25 +1,25 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-<br>
-<strong><%= @posts.count %></strong>
-<br>
-<ul>
-  <% @posts.each do |post| %>
-    <li>
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <h3><%= post.title %></h3>
-          </div>
-          <div class="col-6">
+<div class="center">
+  <h1>Exclusive Topics</h1>
+  <p>Discover trending posts from our members</p>
+</div>
+
+<div class="container">
+    <div class="row">
+      <% @posts.each do |post| %>
+      <div class="panel panel-default col-6">
+          <div class="panel-heading"><h3><%= post.title %></h3></div>
+          <div class="author panel-body">
+            <%= post.body %>
             <% if member_signed_in? %>
               <p>
-                <h6><%= current_member.name %></h6>
+                <%= current_member.name %> &nbsp;&bull; <%= Time.now %>
               </p>
             <% end %>
           </div>
-        </div>
       </div>
-    </li>
-  <% end %>
-</ul>
+      <% end %>
+    </div>
+</div>
+
+
+
