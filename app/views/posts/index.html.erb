@@ -1,2 +1,12 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
+<br>
+<strong><%= @posts.count %></strong>
+<br>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= post.title %>
+    </li>
+  <% end %>
+</ul>
