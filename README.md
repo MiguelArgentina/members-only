@@ -25,6 +25,8 @@ Implementing authentication systems so users can only access areas and view cont
 - Navigate to a directory of your choosing using the `cd` command
 - Run this command in your OS terminal: `git clone git@github.com:MiguelArgentina/members-only.git` to get a copy of the project.
 - Navigate to the project's directory using the `cd` command
+- Install dependencies running `bundle install`
+- Run migrations to get the databases using: `rails db:migrate`
 - Execute `rails s` to fire up the server
 - Visit `http://localhost:3000/` to see the form on your browser
 - The user can interact with the blog using the link in the nav bar. To sign up, they can use the `Become a member` link
