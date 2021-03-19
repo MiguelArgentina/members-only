@@ -6,7 +6,20 @@
 <ul>
   <% @posts.each do |post| %>
     <li>
-      <%= post.title %>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h3><%= post.title %></h3>
+          </div>
+          <div class="col-6">
+            <% if member_signed_in? %>
+              <p>
+                <h6><%= current_member.name %></h6>
+              </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </li>
   <% end %>
 </ul>
