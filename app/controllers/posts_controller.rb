@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_member!, only: %i[new create]
 
   def new
-    @post = current_member.posts.build
+    @post = Post.new
   end
 
   def show; end
