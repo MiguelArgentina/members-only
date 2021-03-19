@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  #before_action :authenticate_member!, only: [:new, :create]
+  before_action :authenticate_member!, only: [:new, :create]
 
   def new
     @post = current_member.posts.build
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @post = current_member.posts.build(post_params)
 
     if @post.save
-      redirect_to @post
+      redirect_to posts_index_path
     else
       render :new
     end
