@@ -3,14 +3,14 @@ class PostsController < ApplicationController
   #before_action :authenticate_member!, only: [:new, :create]
 
   def new
-    @post = Post.new
+    @post = current_member.posts.build
   end
 
   def show
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_member.posts.build(post_params)
 
     if @post.save
       redirect_to @post
