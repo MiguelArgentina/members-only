@@ -74,6 +74,13 @@ p {
   }
 }
 
+.alert-alert { @extend .alert-warning; }
+.alert-notice { @extend .alert-success; }
+
+.clubhouse {
+  padding-top: 30px;
+}
+
 .panel-footer {
   h2 {
     text-align: left;
