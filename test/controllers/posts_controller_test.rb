@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
   test 'should get new' do
@@ -6,7 +6,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to member_session_path
   end
 
-  test "should get index" do
+  test 'should get index' do
     get posts_index_url
     assert_response :success
   end

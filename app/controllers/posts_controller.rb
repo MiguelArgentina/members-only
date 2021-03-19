@@ -1,13 +1,11 @@
 class PostsController < ApplicationController
-
-  before_action :authenticate_member!, only: [:new, :create]
+  before_action :authenticate_member!, only: %i[new create]
 
   def new
     @post = current_member.posts.build
   end
 
-  def show
-  end
+  def show; end
 
   def create
     @post = current_member.posts.build(post_params)
@@ -28,5 +26,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body)
   end
-
 end
