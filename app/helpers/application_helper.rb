@@ -1,6 +1,6 @@
 module ApplicationHelper
   def author(post)
-    @author = Member.find_by(id: post.member_id).name if member_signed_in?
+    @author ||= Member.find_by(id: post.member_id).name if member_signed_in?
     @author
   end
 
