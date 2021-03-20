@@ -1,0 +1,16 @@
+<li><%= link_to "Add Post", new_post_path %> </li>
+<li>
+  <%= link_to 'Logout',  destroy_member_session_path, method: :delete %>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    Account <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li><%= link_to 'Upcoming Events', '#' %></li>
+    <li><%= link_to 'Inbox', '#' %></li>
+    <li><%= link_to 'Edit Profile',  edit_member_registration_path %></li>
+    <li class="divider"></li>
+
+  </ul>
+</li>
